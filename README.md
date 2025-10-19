@@ -1,12 +1,14 @@
-🧠 Financial Research AI Assistant
+## 🧠 Financial Research AI Assistant
 
 Authors: Tommy Poole, Spencer Cody, Kevin Hooman
+
 Instructor: Dr. Andrew Van Benschoten
+
 Date: Fall 2025
 
 ⸻
 
-📘 Overview
+### 📘 Overview
 
 The Financial Research AI Assistant is a modular, multi-agent system that automates financial research, data aggregation, and analysis using LLM-powered reasoning and retrieval augmented generation (RAG).
 
@@ -14,69 +16,78 @@ Developed for the AAI 520: NLP and GenAI course, this project showcases a real w
 
 ⸻
 
-⚙️ Core Features
+### ⚙️ Core Features
 
-🧩 Multi-Agent Architecture
+#### 🧩 Multi-Agent Architecture
 
 The system uses four specialized agents that communicate in a dynamic workflow:
+```
 	•	Planner Agent: Designs a step-by-step research plan and assigns tasks.
 	•	Research Agent: Gathers and preprocesses financial data via APIs and datasets.
 	•	Evaluator Agent: Analyzes and verifies retrieved data and summaries for quality.
 	•	Optimizer Agent: Applies self-reflection to refine and improve outputs.
-
-🔄 Workflow Patterns Implemented
+```
+#### 🔄 Workflow Patterns Implemented
+```
 	1.	Prompt Chaining: Sequential reasoning steps (ingest → classify → summarize).
 	2.	Routing to Specialists: Directs tasks to domain-specific agents.
 	3.	Evaluator–Optimizer Loop: Iterative process of generation, evaluation, and refinement.
 	4.	Memory Pattern: Agents log reflections to enhance reasoning in future runs.
-
+```
 ⸻
 
-🧱 Project Structure
+### 🧱 Project Structure
 
-📂 Financial_Research_AI_Assistant/
-
+```📂 Financial_Research_AI_Assistant/
 │
+├── Fina_Resear_Financial_AI_Assistant.ipynb   # Main Jupyter Notebook
+├── data/                                       # Dataset
+├── outputs/                                    # Generated reports, logs, and charts
+├── requirements.txt                            # List of dependencies
+└── README.md                                   # Project documentation
 
-├── Fina_Resear_Financial_AI_Assistant.ipynb
-
-├── data/
-├── outputs/
-├── requirements.txt
-└── README.md
-
+```
 
 ⸻
 
-🧰 Tools & Libraries
-
+### 🧰 Tools & Libraries
+```
 Category	Libraries / Tools
 Core	Python 3.10+, Jupyter Notebook
 Data Retrieval	yfinance, requests, alpha_vantage
 Data Processing	pandas, numpy
 LLM & Agentic Frameworks	openai, transformers, langchain, langgraph
 Visualization	matplotlib, seaborn
-
+```
 
 ⸻
 
-🚀 How to Run
-	1.	Install dependencies:
+### 🚀 How to Run
 
+1.	Install dependencies:
+
+```
 pip install -r requirements.txt
+```
 
 
-	2.	Launch the notebook:
+2.	Launch the notebook:
 
+```
 jupyter notebook Fina_Resear_Financial_AI_Assistant.ipynb
+```
 
 
-	3.	Set parameters (e.g., stock symbol):
+3.	Set parameters (e.g., stock symbol):
 
+```
 symbol = "AAPL"  # or any desired ticker
+```
 
 
-	4.	Run all cells sequentially.
+4.	Run all cells sequentially.
+
+
 The assistant will:
 	•	Plan a workflow
 	•	Retrieve stock and filing data
@@ -85,26 +96,26 @@ The assistant will:
 
 ⸻
 
-📊 Example Outputs
+### 📊 Example Outputs
 
-💼 Company Analysis
+#### 💼 Company Analysis
 
 Summaries include:
 	•	Key financial ratios and trends
 	•	Market and stock price data
 	•	Risk factors extracted from SEC filings
 
-🧠 Reflection Logs
+### 🧠 Reflection Logs
 
 Each agent records its reasoning process and self-assessment for iterative improvement.
 
-📈 Visual Outputs
+### 📈 Visual Outputs
 
 The notebook produces plots of financial indicators and sentiment summaries.
 
 ⸻
 
-🎯 Learning Outcomes
+### 🎯 Learning Outcomes
 	•	Built a multi-agent workflow with LLM-based reasoning.
 	•	Integrated RAG pipelines for factual financial data retrieval.
 	•	Implemented reflection and evaluation loops for quality assurance.
@@ -112,15 +123,16 @@ The notebook produces plots of financial indicators and sentiment summaries.
 
 ⸻
 
-🔮 Future Improvements
-	•	Integrate NewsAPI for real-time financial sentiment analysis.
+### 🔮 Future Improvements
 	•	Add vector database memory (FAISS/Chroma) for long-term knowledge.
 	•	Create an interactive web interface using Streamlit or Replit.
 	•	Expand evaluator logic for more robust financial comparisons.
+	
 
 ⸻
 
-📚 References
+### 📚 References
+
 	•	Yahoo Finance API
 	•	SEC EDGAR Database
 	•	LangChain Documentation
@@ -128,3 +140,27 @@ The notebook produces plots of financial indicators and sentiment summaries.
 	•	University of San Diego – AAI 520 Course Materials
 
 ⸻
+
+## ⚖️ License
+
+MIT License
+
+Copyright (c) 2025 Kevin Hooman, Spencer Cody, Tommy Poole
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
