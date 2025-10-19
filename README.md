@@ -1,42 +1,127 @@
-# AAI520_Final-Project_Group5
+🧠 Financial Research AI Assistant
 
-Kevin Hooman, Spencer Cody, Tommy Poole
+Authors: Tommy Poole, Spencer Cody, Kevin Hooman
+Instructor: Dr. Andrew Van Benschoten
+Date: Fall 2025
 
-## Overview
-This project implements a modular AI assistant that leverages large language models (LLMs), retrieval-augmented generation (RAG), and agentic workflows to automate financial research and analysis. The system is designed to:
+⸻
 
-Aggregate and summarize financial data from multiple sources (Yahoo Finance, SEC EDGAR, etc.)
+📘 Overview
 
-Analyze SEC filings and extract key insights
+The Financial Research AI Assistant is a modular, multi-agent system that automates financial research, data aggregation, and analysis using LLM-powered reasoning and retrieval augmented generation (RAG).
 
-Evaluate investment opportunities using dynamic feedback loops
+Developed for the AAI 520: NLP and GenAI course, this project showcases a real world implementation of agent orchestration, reflection, and workflow automation in financial analysis. From retrieving stock data and SEC filings to summarizing findings and generating insights.
 
-Incorporate human feedback for iterative improvement
+⸻
 
-## Features
-* Multi-Agent Orchestration: Specialized agents for research, evaluation, and optimization.
+⚙️ Core Features
 
-* Financial Data Aggregation: Automated retrieval of stock prices, ratios, and company fundamentals.
+🧩 Multi-Agent Architecture
 
-* SEC Filings Analysis: Extraction and summarization of 8-K, 10-K, and other filings.
+The system uses four specialized agents that communicate in a dynamic workflow:
+	•	Planner Agent: Designs a step-by-step research plan and assigns tasks.
+	•	Research Agent: Gathers and preprocesses financial data via APIs and datasets.
+	•	Evaluator Agent: Analyzes and verifies retrieved data and summaries for quality.
+	•	Optimizer Agent: Applies self-reflection to refine and improve outputs.
 
-* Sentiment Analysis: Uses Hugging Face models for financial news and filings.
+🔄 Workflow Patterns Implemented
+	1.	Prompt Chaining: Sequential reasoning steps (ingest → classify → summarize).
+	2.	Routing to Specialists: Directs tasks to domain-specific agents.
+	3.	Evaluator–Optimizer Loop: Iterative process of generation, evaluation, and refinement.
+	4.	Memory Pattern: Agents log reflections to enhance reasoning in future runs.
 
-* Human-in-the-Loop Feedback: Interactive workflow for refining analysis and recommendations.
+⸻
 
-* Markdown Reporting: Outputs formatted investment summaries and commentary.
+🧱 Project Structure
 
-## Example Workflow
-Research Agent: Aggregates financial data and filings for a given stock symbol.
+📂 Financial_Research_AI_Assistant/
+│
+├── Fina_Resear_Financial_AI_Assistant.ipynb   # Main Jupyter Notebook
+├── data/                                       # Datasets
+├── outputs/                                    # Generated reports, logs, and charts
+├── requirements.txt                            # List of dependencies
+└── README.md                                   # Project documentation
 
-Evaluator Agent: Reviews the summary, checks for completeness, and incorporates human feedback.
 
-Optimization Loop: Iteratively refines the analysis based on feedback and additional data sources.
+⸻
 
-## Key Technologies
-1. Python 3.x
-2. LangChain & LangGraph (agent orchestration)
-3. Hugging Face Transformers (LLMs, sentiment analysis)
-4. SEC EDGAR API
-5. Yahoo Finance API
+🧰 Tools & Libraries
 
+Category	Libraries / Tools
+Core	Python 3.10+, Jupyter Notebook
+Data Retrieval	yfinance, requests, alpha_vantage
+Data Processing	pandas, numpy
+LLM & Agentic Frameworks	openai, transformers, langchain, langgraph
+Visualization	matplotlib, seaborn
+
+
+⸻
+
+🚀 How to Run
+	1.	Install dependencies:
+
+pip install -r requirements.txt
+
+
+	2.	Launch the notebook:
+
+jupyter notebook Fina_Resear_Financial_AI_Assistant.ipynb
+
+
+	3.	Set parameters (e.g., stock symbol):
+
+symbol = "AAPL"  # or any desired ticker
+
+
+	4.	Run all cells sequentially.
+The assistant will:
+	•	Plan a workflow
+	•	Retrieve stock and filing data
+	•	Summarize findings
+	•	Evaluate and refine results
+
+⸻
+
+📊 Example Outputs
+
+💼 Company Analysis
+
+Summaries include:
+	•	Key financial ratios and trends
+	•	Market and stock price data
+	•	Risk factors extracted from SEC filings
+
+🧠 Reflection Logs
+
+Each agent records its reasoning process and self-assessment for iterative improvement.
+
+📈 Visual Outputs
+
+The notebook produces plots of financial indicators and sentiment summaries.
+
+⸻
+
+🎯 Learning Outcomes
+	•	Built a multi-agent workflow with LLM-based reasoning.
+	•	Integrated RAG pipelines for factual financial data retrieval.
+	•	Implemented reflection and evaluation loops for quality assurance.
+	•	Demonstrated end-to-end automation in a realistic AI system design context.
+
+⸻
+
+🔮 Future Improvements
+	•	Integrate NewsAPI for real-time financial sentiment analysis.
+	•	Add vector database memory (FAISS/Chroma) for long-term knowledge.
+	•	Create an interactive web interface using Streamlit or Replit.
+	•	Expand evaluator logic for more robust financial comparisons.
+
+⸻
+
+📚 References
+	•	Yahoo Finance API
+	•	SEC EDGAR Database
+	•	LangChain Documentation
+	•	LangGraph Framework
+	•	University of San Diego – AAI 520 Course Materials
+
+⸻
