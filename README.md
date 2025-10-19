@@ -35,8 +35,11 @@ The system uses four specialized agents that communicate in a dynamic workflow:
 🧱 Project Structure
 
 📂 Financial_Research_AI_Assistant/
+
 │
+
 ├── Fina_Resear_Financial_AI_Assistant.ipynb
+
 ├── data/
 ├── outputs/
 ├── requirements.txt
